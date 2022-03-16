@@ -36,11 +36,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="email_to" class="form-label">To: [Email address]</label>
-                            <input type="email" class="form-control" name="email_to" id="email_to" placeholder="name@example.com">
+                            <input type="email" class="form-control" name="email_to" id="email_to" placeholder="name@example.com" required>
                         </div>
                         <div class="mb-3">
                             <label for="subject" class="form-label">Subject :</label>
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label"><strong>Add Tasks</strong> <a id="add_task" class="btn btn-primary">+</a></a></label>
@@ -58,7 +58,7 @@
                                 <tbody>
                                     <tr id="clonetr">
                                         <td width="200">
-                                            <select class="form-select" name="projects[]" id="projects_1">
+                                            <select class="form-select" name="projects[]" id="projects_1" required>
                                                 <option value="">Select Project</option>
                                                 <?php
                                                     foreach($config['projects'] as $project)
@@ -69,13 +69,13 @@
                                             </select>
                                         </td>
                                         <td width="400">
-                                            <input type="text" class="form-control" name="task[]" id="task_1" placeholder="Enter Task">
+                                            <input type="text" class="form-control" name="task[]" id="task_1" placeholder="Enter Task" required>
                                         </td>
                                         <td width="400">
-                                            <textarea name="description[]" class="form-control" id="description_1" rows="3" placeholder="Enter Description"></textarea>
+                                            <textarea name="description[]" class="form-control" id="description_1" rows="3" placeholder="Enter Description" required></textarea>
                                         </td>
                                         <td width="200">
-                                            <select class="form-select" name="hours[]" id="hours_1" style="display:inline;  width:40%">
+                                            <select class="form-select" name="hours[]" id="hours_1" style="display:inline;  width:40%" required>
                                                 <option value="">Hour</option>
                                                 <?php
                                                     for ($i = $config['hours']['from']; $i <= $config['hours']['to']; $i++)
@@ -86,7 +86,7 @@
                                                 ?>
                                             </select>
                                             :
-                                            <select class="form-select" name="minutes[]" id="minutes_1" style="display:inline; width:40%">
+                                            <select class="form-select" name="minutes[]" id="minutes_1" style="display:inline; width:40%" required>
                                             <option value="">Min.</option>
                                                 <?php
                                                     foreach($config['minutes']as $min)
